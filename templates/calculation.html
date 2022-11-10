@@ -1,0 +1,43 @@
+<!----------------問題２-------------->
+{% extends "layout.html" %}
+{% block content %}
+<main>
+    <div class="content">
+        <h1>今日の天気の情報を入れてください。<br>0~1の数字を入力してください。</h1>
+        <form action="/calc" method="POST">
+            <p>
+                <label><span>今日の天気は？(晴れ)</span>
+                    <input type="text" name="sunny" placeholder="晴れ">
+                </label>
+            </p>
+            <p>
+                <label><span>今日の天気は？(曇り)</span>
+                    <input type="text" name="cloudy" placeholder="曇り">
+                </label>
+            </p>
+            <p>
+                <label><span>今日の天気は？(雨)</span>
+                    <input type="text" name="rainy" placeholder="雨">
+                </label>
+            </p>
+            <p>
+                <label><span>今日の天気は？(寒い)</span>
+                    <input type="text" name="cold" placeholder="寒い">
+                </label>
+            </p>
+            <p>
+                <label><span>今日の天気は？(暑い)</span>
+                    <input type="text" name="hot" placeholder="暑い">
+                </label>
+            </p>
+            <div class="calc_btn">
+                <input type="submit" value='表示！'>
+            </div>
+        </form>
+        
+    </div>
+    <p>おすすめの曲は{{result}}</p>
+
+</main>
+{% endblock %}
+<!----------------------------------->
